@@ -33,10 +33,11 @@ public class ScrollingFragment extends Fragment {
         LinearLayout layout = view.findViewById(R.id.linearScrollingLayout);
 
         while(it.hasNext()) {
-            TextView text = new TextView(getContext());
-            text.setText(it.next().toString());
+            View template = inflater.inflate(R.layout.user_layout_template, container, false);
 
-            layout.addView(text);
+            TextView text = template.findViewById(R.id.userNameText);
+            text.setText(it.next().toString());
+            layout.addView(template);
         }
 
         return view;
