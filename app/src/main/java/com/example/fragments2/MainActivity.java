@@ -21,9 +21,14 @@ public class MainActivity extends AppCompatActivity {
 
     public Bundle sampleData() {
         ArrayList<String> list = new ArrayList<>();
-        list.add("Ciaran Clifford");
-        list.add("Benny Bryant");
-        list.add("Georgie Burt");
+
+        for(int i = 0;i < 100;i++) {
+            list.add("Ciaran Clifford "+i);
+            list.add("Benny Bryant "+i);
+            list.add("Georgie Burt "+i);
+        }
+
+
         Bundle bundle = new Bundle();
         bundle.putStringArrayList("names",list);
         return bundle;
