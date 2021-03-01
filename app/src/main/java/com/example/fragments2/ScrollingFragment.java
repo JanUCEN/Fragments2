@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-class ScrollingFragment extends Fragment {
+public class ScrollingFragment extends Fragment {
 
     @Nullable
     @Override
